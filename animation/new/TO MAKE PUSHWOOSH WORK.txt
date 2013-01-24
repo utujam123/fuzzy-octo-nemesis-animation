@@ -1,0 +1,43 @@
+Appdelegate.h
+#import "PushNotificationManager.h"
+@interface PpushNotificationsAppAppDelegate : NSObject <UI ApplicationDelegate, PushNotificationDelegate>
+@property (nonatomic, retain) PushNotificationManager *pushManager
+
+Appdelegate.m
+-(BOOL)Application: (UI Applicationjj *) application didFinishLaunchingWithOptions : (NSDictionary *) LaunchOptions {
+//Enter AppCode here
+//Ask to register for remote notifications
+
+[[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSo
+//initialize push manager instance
+pushManager= [[PushNotificationManager alloc ] initWithApplicationCode:@"YOUR APP CODE" appName:@"APP NAME"];
+pushManager.delegate = self;
+[pushManager handlePushReceived:launchOptions];
+
+Add this on top of AppDelegate.m
+@synthesize pushManager
+
+//add this under @synthesize
+-(void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+ [puchManager handlePushRegistration:devToken];
+
+		//you sight want to send it to your backend if you use remote integration
+		NSString *token = [pushManager getPushtoken];
+		NSLog(@*Push token: %@" , token);
+}
+
+-(void)application:(UIApplication *)app didFailToRegisterRemoteNotificationsWithError:(NSError *) err{
+	NSLog(@*Error registering for pushs notifications. Error: %@", err);
+}
+
+- (void)application:(UIApplication  *)application didereceiveRemoteNotification:(NSDictionarry *) userinfo{
+	[pushManager handlePushReceived:userInfo];
+}
+//add this after the code above :)))
+-(void) onPushAccepted:(PushNotificationManager *)manaager {
+//handle push notification here
+}
+
+Add this at - (void)dealloc {
+self.pushManager = nil;
+ 

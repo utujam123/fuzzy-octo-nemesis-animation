@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.1-6-2.min.js"></script>
+<script> 
+$(document).ready(function(){
+  
+    
+	
+	$('#bomb').attr({'src': 'images/robotbombed/bomb.png'}).animate({opacity: 1},0 ).animate({opacity: 1,}, 600, function() {
+		$('#bomb').attr({'src': 'images/robotbombed/bomb2.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 200, function() {
+			$('#bomb').attr({'src': 'images/robotbombed/bomb3.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 200, function() {
+				$('#bomb').attr({'src': 'images/robotbombed/bomb4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 200, function() {
+					$('#bomb').attr({'src': 'images/robotbombed/bomb4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 200, function() {
+						$('#bomb').attr({'src': 'images/robotbombed/bomb6.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 200, function() {
+							$('#bomb').attr({'src': 'images/robotbombed/bomb7.png'}).animate({opacity: 1},0 ).animate({opacity: 0}, 0, function() {	
+								$('#show-item-img').attr({'src': 'images/robotbombed/tv2.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0, function() {
+								$('#bomb2').attr({'src': 'images/robotbombed/bomb8.png'}).animate({opacity: 1},0 ).animate({opacity: 0}, 2000);
+								$('#body').attr({'src': 'images/robotbombed/robot-bombed2.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+									$('#show-item-img').attr({'src': 'images/robotbombed/tv3.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0, function() {
+									$('#body').attr({'src': 'images/robotbombed/robot-bombed3.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+										$('#show-item-img').attr({'src': 'images/robotbombed/tv2.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0, function() {
+										$('#body').attr({'src': 'images/robotbombed/robot-bombed4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+											$('#show-item-img').attr({'src': 'images/robotbombed/tv3.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0, function() {
+											$('#body').attr({'src': 'images/robotbombed/robot-bombed4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);		
+												$('#show-item-img').attr({'src': 'images/robotbombed/tv4.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0, function() {
+												$('#body').attr({'src': 'images/robotbombed/robot-bombed4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+													$('#show-item-img').attr({'src': 'images/robotbombed/tv5.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0, function() {
+													$('#body').attr({'src': 'images/robotbombed/robot-bombed4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+														$('#show-item-img').attr({'src': 'images/robotbombed/tv6.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0, function() {
+														$('#body').attr({'src': 'images/robotbombed/robot-bombed4.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+														});
+													});
+												});
+											});
+										});
+									});	
+								});
+									
+							});
+								
+						});		
+					});			
+				});				
+			});
+		});
+	});
+
+  });
+ 
+ 
+</script> 
+</head>
+ 
+<body>
+
+
+
+
+<div style="position:absolute; left: 50px; top: 300px"><img id="body" src="images/robotbombed/robot-bombed1.png">
+
+	<div id="show-item-div" style="background:url('images/robot beer/sam.jpg') no-repeat;position:absolute; left: 67px; top: -222px; opacity: 1.0; background-size: 85% 85%; background-position: center;"><img id="show-item-img" src="images/robotbombed/tv1.png"></div>
+	
+<div style="margin-top: -320px; margin-left: 240px; position:relative; z-index:1;"><img id="bomb" style="width: 120px; height: 120px" src="images/robotbombed/bomb.png">
+</div>
+
+<div style="margin-top: -250px; margin-left: 132px; position:relative; z-index:1;"><img id="bomb2" src="">
+</div>
+</body>
+</html>

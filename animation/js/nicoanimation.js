@@ -1,32 +1,39 @@
-
-
-function animatee2()
-{
+	
 	$(document).ready(function(){
 		$("#start-anim").click(function(){
-			if($("#container2").children().length == 2)
+			if($("#container2").children().length > 0)
 			{
-				return FALSE;
+			 
 			}
-			$("<img id = 'body2'></img>").attr("src","images/flower/flower1.png").css({
+			$("<img id = 'body2'/>").attr("src","images/flower/flower1.png").css({
 					"position"    : "relative",
 					"z-index"     : "1",
 					"margin-left" : "-10px",
 					"margin-top"  : "-10px",
 			}).appendTo("#container2");
-			$("<img id = 'show-item-img'></img>").attr
-			("src","images/flower/tv1.png").appendTo("#container2").css({
+			$("<div id = 'show-item-div'></div>").css({
+					"background"  : "url('new/animation/images/robot beer/sam.jpg') no-repeat",
 					"position"	  : "absolute",
 					"left"		  : "410px",
-					"top"		  : "118px",
+					"top"		  : "4000px",
 					"opacity"	  : "1.0",
+					"background-size": "85% 85%",
 					"background-position" : "center"
-			});
+			}).appendTo("#container2");
+			$("<img id = 'show-item-img'/>").attr
+			("src","images/flower/tv1.png").appendTo("#show-item-div");
 			do_animate();
 
 		});
+
+
+		$("#restart-anim").click(function(){
+			$("#body2").remove();
+			$("#show-item-img").remove();
+			$("#show-item-div").remove();
+		});
 	});
-}
+
 
 function do_animate()
 {

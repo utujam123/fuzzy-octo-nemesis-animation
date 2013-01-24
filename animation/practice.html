@@ -1,15 +1,23 @@
 <html>
 	<head>
 	<body>
-	<ul>
-		<li>HAHAHAHAHA</li>
-	</ul>
-
-	li
+		<button id ='button1'>Hide</button>
+		<button id ='button2'>Show</button>
+		<h2>This is a heading</h2>
+		<p>This is a paragraph.</p>
+		<p id="test">This is another paragraph.</p>
+		
+	
 	<script src="js/jquery.1-6-2.min.js"></script>	
 	<script>
-		var ulli = jQuery('ul li');
-		ulli.css("color","green");
+			$(document).ready(function(){
+			  $("#button1").click(function(){
+			    $("#test").hide();
+			  });
+			  $("#button2").click(function(){
+			  	$("#test").show();
+			  });
+			});
 	</script>
 	</body>
 </html>

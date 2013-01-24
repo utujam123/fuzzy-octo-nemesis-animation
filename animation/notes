@@ -1,0 +1,159 @@
+CLOCK ROBOT SAM
+
+
+parent : container2
+	child  : (img)body2
+	child  : (div)show-item-div
+		child : (img)show-item-img
+
+attributes
+=============
+
+container2 
+---------- 
+"position" : "absolute",
+"left"	   : "50px",
+"top" 	   : "300px"
+
+show-item-div
+----------
+"background" :"url('images/robot beer/sam.jpg') no-repeat",
+"position"   : "absolute",
+"left"		 : "67px",
+"top"		 : "-224px",
+"opacity"	 : "1.0",
+"background-size" : "85% 85%",
+"background-position" : "center"
+=================================
+BURGER ROBOT FINAL
+
+parent : (div)container2
+	 child : (img)body2
+	 child : (div)show-item-div
+	 	child : (img)show-item-img
+
+attributes
+=============
+
+body2 "src","images/robotburger/roboburger.png"
+----------
+"position" : "relative",
+"z-index"  : "1",
+"margin-left" : "-10px",
+"margin-top"  : "-10px",
+
+show-item-div
+---------------
+"background" : "url('images/robot beer/sam.jpg') no-repeat",
+"position" : "absolute",
+"left" : "67px",
+"top"  : "95px",
+"opacity" : "1.0",
+"background-size" : "85% 85%",
+"background-position" : "center"
+
+show-item-img
+"position" : "absolute",
+"left"  : "20px",
+"top" : "30px"
+
+============================
+BOMBED ROBOT 
+
+parent :	(div)container2
+	child : (div)show-body2
+		child : (img)body2
+	child : (div)show-item-div
+		child: (img)show-item-img
+	child : (div)div-bomb
+		child: (img)bomb
+	child : (div)div-bomb2
+		child: (img)bomb2
+
+attributes
+=============
+
+show-body2
+"position" : "absolute",
+"left" 	   : "50px",
+"top"	   : "400px"
+
+body2
+"src","images/robotbombed/robot-bombed1.png"
+
+show-item-div
+"background" : "url('images/robot beer/sam.jpg) no-repeat",
+"position"   : "absolute",
+"left"		 : "67px",
+"top"		 : "-222px",
+"opacity"	 : "1.0",
+"background-size" 	 : "85% 85%",
+"background-position": "center"
+
+show-item-img
+"src","images/robotbombed/tv1.png"
+
+div-bomb
+"margin-top" : "-320px",
+"margin-left": "240px",
+"position"   : "relative"
+"z-index"	 : "1"
+
+bomb
+"width"		 : "120px",
+"height"	 : "120px",
+"src","images/robotbombed/bomb.png"
+
+div-bomb2
+"margin-top" : "-250px",
+"margin-left": "132px",
+"position"   : "relative"
+"z-index"	 : "1"
+
+bomb2
+"src","/images/robotbombed/bomb8.png"
+
+================================
+BEER ROBOT
+
+parent : (div)container2
+	child : (img) body.png
+	child : (div)show-item-div
+		child:  (img)show-item-img
+	child : (img)item-img-div1
+		child: (img) show-item-img1
+
+attributes
+--------------
+
+container2
+--------
+"position" : "absolute",
+"left" 	   : "150px",
+"top"	   : "300px"
+
+$("<img/>").attr("src","images/robot beer/body.png";).appendTo("#container2");
+
+show-item-div
+---------------
+"background" : "url('images/robot beer/sam.jpg'); no-repeat",
+"position"	 : "absolute",
+"left"		 : "-40px",
+"top"		 : "-222px",
+"opacity"	 : "1.0",
+"background-size" : "85% 85%"
+"background-position" : "center"
+
+$("<img id = 'show-item-img'/>").attr("src","images/robot beer/tv.png";).appendTo("#show-item-div");
+
+item-img-div1
+----------------
+"margin-left" : -72px,
+$("<img/>").attr("src","images/robot beer/body.png";).appendTo("#item-img-div1");
+
+$("#container_image").remove();
+$("#do-show-item-img2").remove();
+$("#show-item-img2").remove();
+$("#do-show-item-img1").remove();
+$("#show-item-img1").remove();
+$("#show-item-div").remove();
