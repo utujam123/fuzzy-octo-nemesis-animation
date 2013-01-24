@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.1-6-2.min.js"></script>
+<script> 
+$(document).ready(function(){
+
+loisample();					
+
+
+ 
+  });
+ 
+function loisample(){
+  
+ 
+	
+	
+	$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+	$('#show-item-img').css("margin-top","100px");	
+	$('#putok').attr({'src': 'images/fireworksrobot/firecrackers1.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+		$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks0.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0);		
+		$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+		$('#putok').attr({'src': 'images/fireworksrobot/firecrackers2.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+			$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0, function() {
+			$('#show-item-img').css("margin-top","118px");
+			$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks1.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+			$('#putok').attr({'src': 'images/fireworksrobot/firecrackers3.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+				$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+				$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks2.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0);
+				$('#show-item-img').css("margin-top","100px");
+				$('#putok').attr({'src': 'images/fireworksrobot/firecrackers4.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+					$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+					$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks3.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0);
+					$('#show-item-img').css("margin-top","86px");
+					$('#putok').attr({'src': 'images/fireworksrobot/firecrackers5.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+						$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+						$('#show-item-img').css("margin-top","100px");
+						$('#putok').attr({'src': 'images/fireworksrobot/firecrackers6.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+							$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks0.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0);	
+							$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+							$('#putok').attr({'src': 'images/fireworksrobot/firecrackers7.png'}).animate({opacity: 1},100 ).animate({opacity: 1}, 0);
+								$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0, function() {
+								$('#show-item-img').css("margin-top","118px");
+								$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks1.png'}).animate({opacity: 1},0 ).animate({opacity: 1}, 0);
+								$('#putok').attr({'src': 'images/fireworksrobot/firecrackers8.png'}).animate({opacity: 1},100 ).animate({opacity: 0}, 200);
+									$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+									$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks2.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0);
+									$('#show-item-img').css("margin-top","100px");
+										$('#show-item-img').attr({'src': 'images/fireworksrobot/tv1.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, function() {
+										$('#show-item-img').css("margin-top","86px");
+										$('#body').attr({'src': 'images/fireworksrobot/robot_fireworks3.png'}).animate({opacity: 1},150 ).animate({opacity: 1}, 0, loisample());
+											
+											
+										});
+									});
+								});	
+							});
+						});
+						
+					});
+				});
+			});	
+		});
+	});
+
+}
+ 
+  
+
+ 
+</script> 
+</head>
+ 
+<body>
+
+
+
+
+
+
+<div id="show-item-img" style="background:url('images/robot beer/sam.jpg') no-repeat;  opacity: 1.0; background-size: 85% 82%; background-position: center; position:absolute; left: 100px; margin-top: 100px;"><img  src="images/clockrobot/tv1.png"></div>
+
+
+<div style=" padding-left: 25px; padding-top: 3px; position:relative; z-index:1"><img id="body" src="images/fireworksrobot/robot_fireworks0.png"></div>
+<div style=" margin-left: 20px; margin-top: -620px; "><img id="putok" style="height:280px; width:300px" src="images/fireworksrobot/firecrackers1.png"></div>
+
+</body>
+</html>

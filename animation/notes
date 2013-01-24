@@ -157,3 +157,4 @@ $("#show-item-img2").remove();
 $("#do-show-item-img1").remove();
 $("#show-item-img1").remove();
 $("#show-item-div").remove();
+$("#show-item-img").remove();
