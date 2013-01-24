@@ -5,6 +5,7 @@
 			{
 			return false;
 			}
+			$("#container2").css({"margin-left":"350px"});
 			$("<img id = 'body2'/>").attr("src","images/flower/flower1.png").css({
 					"position"    : "relative",
 					"z-index"     : "1",

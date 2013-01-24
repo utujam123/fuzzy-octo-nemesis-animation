@@ -5,6 +5,7 @@
 			{
 			return false;
 			}
+			$("#container2").css({"right":"50px","top":"220px","position":"absolute"});
 			$("<img id = 'body2'/>").attr("src","images/clockrobot/robot_clock1.png").appendTo("#container2");
 			$("<div id = 'show-item-div'></div>").css({
 					"background"  : "url('new/animation/images/robot beer/sam.jpg') no-repeat",
