@@ -9,13 +9,15 @@
 			$("<div id='wrapper'></div>").css({
 				 "bottom": "50%",
 		         "right" :  "50%",
-		         "position": "absolute"
+		         "position": "fixed"
+			
 
 		    }).appendTo(document.body);
 			$("<div id='container'></div>").css({
 				 "left"     : "50%",
           		 "position" : "relative",
-        		 "top"      : "50%;"
+        		 "top"      : "50%;",
+				 "margin-top" :  "15%"
 			}).appendTo("#wrapper");
 
 			$("#container,#wrapper").css({"height":"500px","width":"450px"})

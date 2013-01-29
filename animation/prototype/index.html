@@ -1,125 +1,45 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Test Prototype</title>
-	<style type = "text/css">
-	#wrapper, #container {
-        height: 500px;
-        width: 600px;
-    }
-    #wrapper {
-        bottom: 50%;
-        right: 50%;
-        position: absolute;
-    }
-    #container {
-
-        background-color: yellow;
-        left: 50%;
-        position: relative;
-        top: 80%;
-	}
-	#container-robot
+		<title>Flower Robot Final</title>
+	<style>
+	@media screen and (max-width: 640px)  and (min-width:460px) {
+	#container2
 	{
-	background-color: blue;
-	width : 50%;
-	margin : 0 auto;		
+	height: 600px;
+	margin-top:15%;
 	}
-	#img-robot-body
+	#body2
 	{
-		height : 450px;
-		margin : 0 auto;
-		max-width: 100%;
+		height :300px;
+		margin-top:157px;
+		margin-left:89px;
 	}
 
-	/* max-width */
-	@media screen and (max-width: 600px){
-		#img-robot-body
-		{
-		height : 50%;
-		width:50%;
-		}
+	#show-item-div
+	{
+	background-size: 25% 25%;
+	position: :absolute;
+	height:100px;
+	width:110px;
+	left:70px;
+	top:132px;
+	
 	}
+	#show-item-img
+	{
+	position: :absolute;
+	height:100px;
+	
+	}
+	
 
-	/* min-width */
-	@media screen and (min-width: 900px){
-		
-	}
-
-	/* min-width & max-width */
-	@media screen and (min-width: 600px) and (max-width: 900px) {
-		#img-robot-body
-		{
-			height : 425px;
-		}
-	}
-	/* max device width */
-	@media screen and (max-device-width: 480px) {
-		#img-robot-body
-		{
-			height : 300px;
-		}
-	}
-            
 	</style>
 	</head>
 	<body>
-	<div id="lipsum">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat ante et ante. Donec sodales lacinia ante. Quisque sem urna, iaculis id, rhoncus ac, venenatis ut, massa. Mauris sit amet mauris. Aliquam ut massa at ante condimentum gravida. Etiam pulvinar massa a ante. Integer pharetra. Fusce quam neque, aliquet tristique, ullamcorper id, blandit id, tortor. Nunc lacinia egestas enim. Maecenas molestie rhoncus quam.
-        </p>
-        <p>
-        Proin aliquet gravida lorem. Curabitur sed elit. Aenean posuere purus. Ut a risus. Duis accumsan auctor velit. Vivamus ornare. Donec semper, diam et pellentesque scelerisque, lacus eros blandit odio, quis auctor massa leo sed magna. Donec vitae ligula id nunc placerat elementum. Quisque interdum ipsum quis ante. Pellentesque sem leo, dignissim ut, euismod vitae, placerat et, turpis. Nulla tempus velit id ligula. In sodales pellentesque dolor. Quisque ac ante a magna eleifend laoreet. Donec egestas congue leo. Cras eget dolor faucibus mi mattis adipiscing. Quisque posuere gravida tortor. Mauris vel felis. Morbi non orci nec elit posuere euismod. Mauris venenatis volutpat purus. Duis ac velit.
-        </p>
-        <p>
-        Fusce at ante at tellus dictum tempor. Maecenas ornare elit et lorem. Nam ornare congue neque. Nulla consectetur. Praesent sollicitudin, mi a rhoncus auctor, velit lorem tempus massa, ut rhoncus orci nunc id urna. Quisque sollicitudin ante non massa. Etiam pulvinar velit vitae orci. Nullam vehicula tortor ac metus. Sed mi dolor, molestie nec, lobortis sed, pellentesque quis, quam. Curabitur ultricies risus eu lacus. Proin aliquam porta ante. Suspendisse tincidunt lacinia nibh. Cras mauris augue, placerat a, elementum eu, cursus non, justo. Vivamus volutpat, orci in varius convallis, libero nibh rhoncus felis, a condimentum dolor massa nec dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse ut velit vitae mi gravida suscipit. Praesent ac odio vel erat lacinia imperdiet.
-        </p>
-        <p>
-        Aenean gravida lectus. Nam congue odio eget est dignissim tempor. Phasellus aliquet viverra nisl. Nam varius turpis sit amet odio. Cras pellentesque, augue a posuere imperdiet, purus urna tincidunt leo, nec pretium quam purus ut orci. Vivamus tempus ligula et ligula fermentum bibendum. Nam fringilla sodales elit. Sed in ligula. Duis rhoncus sem non est. Suspendisse dictum, nunc ac vulputate sollicitudin, magna felis condimentum diam, in pretium lectus sem at libero. Suspendisse vitae erat.
-        </p>
-        <p>
-        Mauris porta ultricies diam. Pellentesque tincidunt. Vestibulum tempus. Vestibulum posuere eleifend lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sagittis nulla in nibh. Nulla eu erat ut purus dictum sollicitudin. Vestibulum justo. Praesent sit amet nunc et lacus ultrices lobortis. Duis bibendum erat sed dolor. In enim. Duis a tortor non justo hendrerit facilisis. Maecenas ipsum elit, volutpat et, dictum a, rutrum a, arcu. Phasellus feugiat. Pellentesque euismod, ipsum id venenatis molestie, mi sem ullamcorper mauris, ac sagittis sem eros eu mauris. Proin enim nibh, euismod non, sodales at, feugiat vel, lacus. Duis condimentum dignissim est.
-        </p>
-        <p>
-        Vestibulum dui arcu, pellentesque eget, ullamcorper sit amet, vehicula eget, turpis. Donec quis dolor. In hac habitasse platea dictumst. Phasellus nec dui convallis tellus rhoncus pellentesque. Nulla sit amet purus vitae nisl cursus consectetur. Ut libero mi, vestibulum ac, interdum eu, aliquam vel, est. Aliquam a velit. Nullam fermentum consequat ligula. In hac habitasse platea dictumst. Proin lorem. Maecenas tincidunt, eros ut luctus fermentum, lacus neque semper diam, in rhoncus orci felis blandit justo.
-        </p>
-        <p>
-        Nunc imperdiet risus non justo dignissim facilisis. Ut pellentesque. Phasellus adipiscing mattis magna. Proin vel neque. Nam adipiscing lectus eu metus. Nullam et est id urna faucibus rhoncus. Phasellus ultrices, nisi vel consectetur congue, nisl libero venenatis enim, ac dictum orci elit posuere ligula. Aliquam mollis tellus pulvinar metus. In quis ligula eget mi molestie ultricies. Mauris sed augue. Praesent suscipit velit non elit. Praesent porta interdum ligula. Nunc in neque. Aliquam viverra adipiscing nisi. Maecenas metus odio, vehicula at, tristique quis, euismod id, est. Nam neque. Nulla posuere laoreet urna. Nam pulvinar auctor mi.
-        </p>
-        <p>
-        Sed leo quam, rhoncus in, porttitor quis, aliquet non, diam. Curabitur sodales. Nullam diam. Vivamus blandit quam a erat. Fusce hendrerit ante sed felis. Cras varius risus vitae dolor. Morbi porttitor sem at lorem. Phasellus in ante eget ipsum rutrum laoreet. Quisque accumsan est in eros. Vivamus elit. Nullam tempor. Phasellus id neque vel eros volutpat molestie. Nunc a felis. Nullam euismod. Pellentesque nibh tellus, condimentum ut, facilisis et, molestie vitae, massa. Aenean diam sapien, sagittis sit amet, euismod ac, dictum non, nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <p>
-        Vestibulum imperdiet ultrices lectus. Morbi justo. Suspendisse eu felis. Pellentesque non purus. Phasellus sodales orci gravida risus. Quisque et nibh non quam consequat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam eget tellus et magna pellentesque ornare. In in lorem. Mauris libero justo, convallis sit amet, viverra in, tempus vitae, nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed dapibus congue dui.
-        </p>
-        <p>
-        Donec quis libero quis lacus dictum porta. Aliquam egestas leo eu nunc. Ut ultricies massa id massa. Donec dapibus risus eu eros. Cras at felis. Morbi felis. Aenean sed diam sed sapien pulvinar lobortis. Integer pharetra sem sit amet nibh. Morbi ac felis quis elit adipiscing ultrices. Morbi nec felis non velit congue condimentum. Nulla in est at velit placerat eleifend. Sed eu dui quis orci egestas imperdiet.
-        </p>
-        <p>
-        Quisque lorem. Curabitur vestibulum tellus eu velit. Vivamus augue odio, tempor vitae, molestie vel, egestas non, enim. Vivamus viverra vehicula magna. Morbi nunc sem, tincidunt nec, feugiat sit amet, vehicula quis, est. Donec ligula. Vivamus arcu. Quisque laoreet ante non nulla. Cras fermentum lacinia arcu. Ut sed erat eget mi consequat cursus. Suspendisse elementum felis at metus. Quisque pretium odio vel urna. Sed at urna.
-        </p>
-        <p>
-        Nam tempor, magna ut porttitor consequat, magna enim pellentesque lacus, aliquam ultrices magna dolor at nunc. Aliquam pulvinar dolor in libero. Nulla ac mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur aliquet lobortis libero. Aliquam odio felis, dapibus vel, gravida eu, faucibus sed, ligula. Mauris vitae velit id nulla dapibus egestas. Pellentesque blandit imperdiet risus. Aenean vulputate dui a tellus. Mauris eros felis, commodo nec, dignissim id, iaculis varius, quam.
-        </p>
-        <p>
-        Nulla diam. Vivamus convallis risus vel orci. Sed ut mi. Sed sem turpis, luctus et, pellentesque sed, molestie ac, turpis. Cras et sem. Cras pellentesque tempus nisi. Etiam et elit a leo tincidunt feugiat. In malesuada dui. Curabitur quam. Nam odio lectus, molestie molestie, tristique vitae, pharetra eu, enim. Donec bibendum eleifend orci. Donec sit amet lorem. Vivamus a nulla. Sed rhoncus rhoncus justo. Proin dapibus arcu quis arcu fermentum vulputate. Nulla malesuada, nunc eu tristique venenatis, lacus turpis posuere dui, vitae varius turpis ipsum sit amet turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi egestas. Nullam scelerisque enim non est. Etiam in eros a augue molestie tincidunt.
-        </p>
-        <p>
-        Nunc ac nulla eu leo laoreet porta. Ut tincidunt, dui nec gravida cursus, orci quam pulvinar tortor, nec pretium ipsum velit sit amet dui. Donec fringilla, massa a varius vulputate, sapien neque tincidunt dui, non commodo purus turpis vel odio. Donec cursus ornare risus. Nam turpis. Vestibulum porttitor arcu at nunc. Phasellus pulvinar ipsum ut urna. Vivamus neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nec ante et dolor lacinia hendrerit. Etiam libero tortor, mollis et, pharetra in, posuere ultricies, nisi. Curabitur porttitor iaculis justo. Aliquam eleifend erat eu erat. Integer dignissim massa. Fusce vitae dolor. Vivamus scelerisque quam ut justo. Vestibulum sit amet metus aliquam urna molestie ultrices. Fusce nec nibh at mauris consectetur sagittis. Donec in leo.
-        </p>
-
-	</div><!--lipsum-->
-		<div id = 'wrapper'>
-			<div id = 'container'>
-				<div id = 'container-robot'>
-					<img id = 'img-robot-body'src = '../images/flower/flower1.png'/>
-				</div>
-			</div><!--container-->
-		</div><!--wrapper-->
-	<script src="../js/jquery.1-6-2.min.js"></script>
-	<script src="proto.js"></script>
-	<script>
-
-	</script>
+		<div id = "container2">
+		</div>
+		<script src="js/jquery.1-6-2.min.js"></script>
+		<script src="js/update_js/flower-robot.js"></script>
 	</body>
 </html>
