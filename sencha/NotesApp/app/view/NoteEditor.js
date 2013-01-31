@@ -9,15 +9,19 @@ Ext.define("NotesApp.view.NoteEditor",{
 		this.callParent(arguments);
 
 		var backButton = {
-			xtype : "button",
-			ui    : "back",
-			text  : "Back"
+			xtype 	: "button",
+			ui    	: "back",
+			text  	: "Home",
+			handler : this.onBackButtonTap,
+			scope	: this
 		};
 
 		var saveButton = {
-			xtype : "button",
-			ui    : "actions",
-			text  : "Save"
+			xtype 	: "button",
+			ui    	: "action",
+			text  	: "Save",
+			handler : this.onSaveButtonTap,
+			scope	: this
 		};
 
 		var topToolbar = {
@@ -31,6 +35,7 @@ Ext.define("NotesApp.view.NoteEditor",{
 			xtype    : "button",
 			iconCls  : "trash",
 			iconMask : true,
+			handler  : this.onDeleteButtonTap,
 			scope    : this
 		};
 
@@ -55,8 +60,20 @@ Ext.define("NotesApp.view.NoteEditor",{
 
 		this.add([topToolbar,{
 			xtype:"fieldset",
-			items : [noteTitleEditor,noteTitleEditor]
+			items : [noteTitleEditor,noteNarrativeEditor]
 			},
 			bottomToolbar]);
-	}
+	},
+		onBackButtonTap: function(){
+			console.log("backButtonTap");
+			this.fireEvent("backButtonTap", this);
+		},
+		onSaveButtonTap: function(){
+			console.log("saveNoteCommand");
+			this.fireEvent("saveNoteCommand", this)
+		},
+		onDeleteButtonTap: function(){
+			console.log("deleteNoteCommand");
+			this.fireEvent("deleteNoteCommand", this);
+		}
 });

@@ -4,17 +4,44 @@
         refs: {
             //we're going to lookup our views by xtype
             notesListContainer: "noteslistcontainer",
-            noteeditor        : "noteeditor"
+            noteEditor        : "noteeditor"
         },
         control: {
-            notesListContainer: {
+            notesListContainer  : {
                 //the commands fired by the notes list container.
-                newNotecommand  : "onNewNoteCommand",
+                newNoteCommand  : "onNewNoteCommand",
                 editNoteCommand : "onEditNoteCommand"
-            } 
+            },
+            noteEditor          : {
+                //the commands fired by the note editor.
+                backButtonTap     : "onBackButtonCommand",
+                saveNoteCommand   : "onSaveNoteCommand",
+                deleteNoteCommand : "onDeleteNoteCommand"
+            }
         }
     },
-    //commands
+    //transitons
+    slideLeftTransition:  { type: 'slide', direction: 'left' },
+    slideRightTransition: { type: 'slide', direction: 'right' },
+    //helper
+    getRandomInt: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+
+    activateNoteEditor : function(record){
+        var noteEditor = this.getNoteEditor();
+        noteEditor.setRecord(record);//load() is deprecated,
+        Ext.Viewport.animateActiveItem(noteEditor,this.slideLeftTransition);
+    },
+    activateNotesList: function (){
+        Ext.Viewport.animateActiveItem(this.getNotesListContainer(),this.slideRightTransition);
+    },
+
+    onBackButtonCommand : function(){
+        console.log("onBackButtonCommand");
+        this.activateNotesList();
+    },
+
     onNewNoteCommand: function() {
         console.log("onNewNoteCommand");
         var now     = new Date();
@@ -28,15 +55,47 @@
         this.activateNoteEditor(newNote);
     },
 
-    slideLeftTransition: { type: 'slide', direction: 'left' },
-    activateNoteEditor : function(record){
-        var noteEditor = this.getNoteEditor();
-        noteEditor.setRecord(record);//load() is deprecated,
-        Ext.Viewport.animateActiveItem(noteEditor,this.slideLeftTransition);
+    onSaveNoteCommand: function() {
+        console.log("onSaveNoteCommand");
+        var noteEditor  = this.getNoteEditor();
+        var currentNote = noteEditor.getRecord();
+        var newValues   = noteEditor.getValues();
 
+        currentNote.set("title",newValues.title);
+        currentNote.set("narrative",newValues.narrative);
+
+        var errors      = currentNote.validate();
+        if(!errors.isValid()){
+            Ext.Msg.alert("Wait",errors.getByField("title")[0].getMessage(),Ext.emptyFn)
+            currentNote.reject();
+            return;
+        }
+
+        var notesStore  = Ext.getStore("Notes");
+        if(null == notesStore.findRecord("id",currentNote.data.id))
+        {
+            notesStore.add(currentNote);
+        }
+        notesStore.sync();
+        notesStore.sort([{property : "dateCreated",direction : "DESC"}]);
+        this.activateNotesList();
     },
+
     onEditNoteCommand: function (list, record) {
         console.log("onEditNoteCommand");
+        this.activateNoteEditor(record);
+    },
+
+    onDeleteNoteCommand: function(){
+        console.log("onDeleteNoteCommand");
+        
+        var noteEditor  = this.getNoteEditor();
+        var currentNote = noteEditor.getRecord();
+        var notesStore  = Ext.getStore("Notes");
+
+        notesStore.remove(currentNote);
+        notesStore.sync();
+        this.activateNotesList();
     },
     //base class functions
     launch: function () {
