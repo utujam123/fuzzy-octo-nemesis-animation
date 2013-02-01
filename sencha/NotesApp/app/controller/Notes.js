@@ -2,11 +2,32 @@
     extend: "Ext.app.Controller",
     config: {
         refs: {
+             /*
+             the commented lines of code is part of the program in chapter 4,
+             i commented it so i have a backup of sample program in the previous chapter
+            */
+
             //we're going to lookup our views by xtype
-            notesListContainer: "noteslistcontainer",
-            noteEditor        : "noteeditor"
+            //notesListContainer: "noteslistcontainer",
+            //noteEditor        : "noteeditor"
+            notesListView       : "noteslist1view",
+            noteEditorView      : "noteeditor1view",
+            notesList           : "#notesList"
+
         },
         control: {
+            notesListView       : {
+                //the commands fired by noteslist1view
+                newNoteCommand  :  "onNewNoteCommand",
+                editNoteCommand :  "onEditNoteCommand",
+            },
+            noteEditorView      : {
+                //the commands fired by noteseditor1view
+                saveNoteCommand   : "onSaveNoteCommand",
+                deleteNoteCommand : "onDeleteNoteCommand",
+                backButtonTap     : "onBackButtonCommand"
+            }
+            /*
             notesListContainer  : {
                 //the commands fired by the notes list container.
                 newNoteCommand  : "onNewNoteCommand",
@@ -17,7 +38,7 @@
                 backButtonTap     : "onBackButtonCommand",
                 saveNoteCommand   : "onSaveNoteCommand",
                 deleteNoteCommand : "onDeleteNoteCommand"
-            }
+            }*/
         }
     },
     //transitons
@@ -29,12 +50,16 @@
     },
 
     activateNoteEditor : function(record){
-        var noteEditor = this.getNoteEditor();
-        noteEditor.setRecord(record);//load() is deprecated,
-        Ext.Viewport.animateActiveItem(noteEditor,this.slideLeftTransition);
+        //var noteEditor = this.getNoteEditor();
+        var noteEditorView = this.getNoteEditorView();
+        //noteEditor.setRecord(record);//load() is deprecated,
+        noteEditorView.setRecord(record);//load() is deprecated,
+        //Ext.Viewport.animateActiveItem(noteEditor,this.slideLeftTransition);
+        Ext.Viewport.animateActiveItem(noteEditorView,this.slideLeftTransition);
     },
     activateNotesList: function (){
-        Ext.Viewport.animateActiveItem(this.getNotesListContainer(),this.slideRightTransition);
+        //Ext.Viewport.animateActiveItem(this.getNotesListContainer(),this.slideRightTransition);
+        Ext.Viewport.animateActiveItem(this.getNotesListView(),this.slideRightTransition);
     },
 
     onBackButtonCommand : function(){
@@ -57,9 +82,12 @@
 
     onSaveNoteCommand: function() {
         console.log("onSaveNoteCommand");
-        var noteEditor  = this.getNoteEditor();
-        var currentNote = noteEditor.getRecord();
-        var newValues   = noteEditor.getValues();
+        //var noteEditor  = this.getNoteEditor();
+        //var currentNote = noteEditor.getRecord();
+        //var newValues   = noteEditor.getValues();
+        var noteEditorView  = this.getNoteEditorView();
+        var currentNote     = noteEditorView.getRecord();
+        var newValues       = noteEditorView.getValues();
 
         currentNote.set("title",newValues.title);
         currentNote.set("narrative",newValues.narrative);
@@ -89,8 +117,11 @@
     onDeleteNoteCommand: function(){
         console.log("onDeleteNoteCommand");
         
-        var noteEditor  = this.getNoteEditor();
-        var currentNote = noteEditor.getRecord();
+        //var noteEditor  = this.getNoteEditor();
+        //var currentNote = noteEditor.getRecord();
+        //var notesStore  = Ext.getStore("Notes");
+        var noteEditorView  = this.getNoteEditorView();
+        var currentNote = noteEditorView.getRecord();
         var notesStore  = Ext.getStore("Notes");
 
         notesStore.remove(currentNote);
